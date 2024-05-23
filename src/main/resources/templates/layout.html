@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cliente App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/clientes">Home</a>
+        <a href="/clientes/create">Create Cliente</a>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h1 th:text="${pageTitle}">Cliente App</h1>
+        <div th:replace="${content}"></div>
+    </div>
+</main>
+</body>
+</html>

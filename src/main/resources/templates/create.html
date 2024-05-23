@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="style" type="text/css" href="SoftenClientes/src/main/resources/static/css/style.css" media="screen" />
+    <meta charset="UTF-8">
+    <title>Cadastrar Cliente</title>
+</head>
+<body>
+<div th:fragment="content">
+    <h2>Cadastrar Cliente</h2>
+    <form th:action="@{/clientes/create}" th:object="${cliente}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" th:field="*{nome}" required><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" th:field="*{cpf}" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" th:field="*{email}" required><br>
+
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" id="logradouro" th:field="*{logradouro}" required><br>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" th:field="*{bairro}" required><br>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" th:field="*{cep}" required><br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" th:field="*{cidade}" required><br>
+
+        <button type="submit">Create</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+version: '3.8'
+
+networks:
+  local-network:
+    driver: bridge
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongoDb
+    volumes:
+      - ./volume/mongo:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - local-network
+    restart: unless-stopped
